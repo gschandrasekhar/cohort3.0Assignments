@@ -1,0 +1,137 @@
+//1
+let colour="Red";
+console.log(colour);
+
+const height="5.8";
+console.log(height)
+
+var AmiLikedPizaa=true;
+console.log(AmiLikedPizaa);
+
+//2.1
+function sum(a,b)
+{
+    return a+b;
+}
+let a=10;
+let b=5;
+console.log(sum(a,b)); //15
+
+let c="10";
+let d="05";
+console.log(sum(c,d)); //1005
+
+//2.2
+function canVote(a)
+{
+    if(a>18 && a>0)
+        console.log("eligible");
+    else{
+       console.log("not eligible");
+    }
+
+     
+}
+let vote=19;
+canVote(vote); //eligible
+
+
+//3
+function result(a)
+{
+    if(a%2==0)
+        return "even";
+    else
+      return "odd";
+}
+let number=20;
+console.log(result(number));
+
+
+//4
+function sumOfNumbers(a)
+{
+    let ans= a*(a+1);
+    return ans/2;
+}
+let num=10;
+console.log(sumOfNumbers(num));
+
+//Write a function that takes a user as an input and greets them with their name and age
+function greet(name, age){
+    console.log("hello" +name +"and age is",age)
+}
+
+let user={
+    name:"chandu",
+    age:21,
+    gender:"M"
+}
+greet(user.name, user.age);
+
+//Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21)
+function greet1(name, age, gender)
+{ let eligbility;
+    if(age>18)
+    {
+        eligbility=true;
+    }
+    else{
+        eligbility=false;
+    }
+  if(gender=="M")
+  {
+    console.log("hi Mr "+name+" your age is "+age+" your status of eligbility to vote"+eligbility);
+
+  }
+  else{
+    if(gender=="F")
+    {
+        console.log("hi Ms"+name+"your age is"+age+"your status of eligbility to vote"+eligbility);
+
+    }
+    else
+    {
+        console.log("hi Others"+name+"your age is"+age+"your status of eligbility to vote"+eligbility);
+
+    }
+  }
+}
+greet1(user.name,user.age,user.gender)
+
+//Write a function that takes an array of numbers as input, and returns a new array with only even values. 
+const nums=[1,2,3,4,5,6,7,8,9]
+function even(arr)
+{
+    return arr.filter(nums=>nums%2==0);
+}
+console.log(even(nums));
+
+//Create a function that takes an array of objects as input,and returns the users whose age > 18 and are male
+
+const user1=[{
+    name:"chandu",
+    age:20,
+    gender:"male"
+},
+{
+    name:"shyam",
+    age:13,
+    gender:"male"
+},
+{
+    name:"priya",
+    age:24,
+    gender:"female"
+},
+{
+    name:"gudiya",
+    age:18,
+    gender:"female"
+}];
+
+function getAdultMales(user1)
+{
+    return user1.filter(user1=>user1.age>18 && user1.gender=="male");
+}
+console.log(getAdultMales(user1))
